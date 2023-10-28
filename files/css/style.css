@@ -43,7 +43,22 @@ ul.navbar-nav .nav-item > ul li:hover a {
     color: white
 }
 
+.carousel .carousel-inner img {
+    
+}
+
 .carousel .carousel-item .container-fluid {
     width: 100%;
     background-color: #fff6 !important;
+}
+aside {
+    border: 1px solid #333
+}
+
+aside .aside-icon i {
+    color: #1c7ed6;
+    transition: all 0.3s ease
+}
+aside .aside-icon i:hover {
+    transform: scale(1.19)
 }
