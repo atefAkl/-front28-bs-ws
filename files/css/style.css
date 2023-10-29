@@ -57,10 +57,6 @@ ul.navbar-nav .nav-item > ul li:hover a {
     background-color: #167595;
 }
 
-.carousel .carousel-item .container-fluid {
-    width: 100%;
-    background-color: #fff6 !important;
-}
 
 aside .aside-icon i {
     color: #1c7ed6;
