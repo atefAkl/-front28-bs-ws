@@ -2,17 +2,19 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+
 ul {
     list-style-type: none;
 }
 
-
 ul.navbar-nav {
-    gap: 10px
+    gap: 10px;
 }
+
 ul.navbar-nav .nav-item {
     padding: 0.5rem 0.2rem;
 }
+
 ul.navbar-nav .nav-item a, 
 ul.navbar-nav .nav-item span.line {
     display: block;
@@ -31,34 +33,39 @@ ul.navbar-nav .nav-item:hover span.line {
 }
 
 ul.navbar-nav .nav-item:hover > a::first-letter {
-    color:#1c7ed6
+    color:#1c7ed6;
 }
 
 ul.navbar-nav .nav-item > ul li a {
     border-left: 5px solid transparent;
 }
+
 ul.navbar-nav .nav-item > ul li:hover a {
     border-left-color: #1c7ed6;
     background-color: #77a8d3;
-    color: white
+    color: white;
 }
 
-.carousel .carousel-inner img {
-    
+#myCarousel .carousel-indicators button {
+    bottom: 50px !important;
+    width: 3rem;
+    height: 0.5rem;
+    background-color: #1675954f;
+}
+
+#myCarousel .carousel-indicators button.active {
+    background-color: #167595;
 }
 
 .carousel .carousel-item .container-fluid {
     width: 100%;
     background-color: #fff6 !important;
 }
-aside {
-    border: 1px solid #333
-}
 
 aside .aside-icon i {
     color: #1c7ed6;
-    transition: all 0.3s ease
+    transition: all 0.3s ease;
 }
 aside .aside-icon i:hover {
-    transform: scale(1.19)
+    transform: scale(1.19);
 }
