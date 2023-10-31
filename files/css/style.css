@@ -2,11 +2,23 @@ body {
     position: relative;
     overflow-x: hidden;
 }
+:root {
+    --main-color: #1c7ed6;
+    --main-color-o: #1c7ed655;
+    --light-grey: #ccc;
+    --light: #fff;
+}
 
 ul {
     list-style-type: none;
 }
 
+.bg-primary {
+    background-color: var(--main-color) !important;
+}
+.text-danger {
+    color: red !important;
+}
 ul.navbar-nav {
     gap: 10px;
 }
@@ -24,7 +36,7 @@ ul.navbar-nav .nav-item span.line {
 ul.navbar-nav .nav-item span.line {
     width: 0;
     height: 3px;
-    background-color: #1c7ed6;
+    background-color: var(--main-color);
     transition: width .4s ease;
 }
 
@@ -33,35 +45,121 @@ ul.navbar-nav .nav-item:hover span.line {
 }
 
 ul.navbar-nav .nav-item:hover > a::first-letter {
-    color:#1c7ed6;
+    color: var(--main-color);
 }
 
 ul.navbar-nav .nav-item > ul li a {
     border-left: 5px solid transparent;
+    transition: all 0.3s ease-in-out
 }
 
 ul.navbar-nav .nav-item > ul li:hover a {
-    border-left-color: #1c7ed6;
-    background-color: #77a8d3;
-    color: white;
+    border-left-color:  var(--main-color);
+    background-color: var(--main-color-o);
+    color: var(--light)
+}
+#myCarousel {
+    height: 40vw;
 }
 
 #myCarousel .carousel-indicators button {
-    bottom: 50px !important;
-    width: 3rem;
-    height: 0.5rem;
-    background-color: #1675954f;
+    width: 3vw;
+    background-color: var(--main-color-o);
+    height: 0.5vw;
 }
-
+#myCarousel .carousel-indicators button:hover,
 #myCarousel .carousel-indicators button.active {
-    background-color: #167595;
+    background-color:  var(--main-color);
 }
 
-
-aside .aside-icon i {
-    color: #1c7ed6;
-    transition: all 0.3s ease;
+.carousel .carousel-inner .carousel-item {
+    height: 40vw;
+    background-size: 100% 100%;
 }
-aside .aside-icon i:hover {
-    transform: scale(1.19);
+
+.carousel .carousel-inner .carousel-item .container {
+    position: relative;
+    max-width: 100% ;
+}
+.carousel .carousel-inner .carousel-item .carousel-caption {
+    position: absolute;
+    top: 5vw;
+    transition: all .1s ease-in-out;
+}
+
+.carousel .carousel-inner .carousel-item h2 {
+    font: bold 3vw/1 Cairo;
+}
+
+.carousel .carousel-inner .carousel-item p {
+    margin-top: 2vw;
+    font: normal 1.5vw/1.6 Cairo;
+    max-width: 45%;
+    text-align: justify;
+
+}
+
+.carousel .carousel-inner .carousel-item button {
+    color: var(--main-color);
+    font: bolder 1.2vw /1.4 Cairo;
+    background-color: var(--light-grey);
+    border: 2px solid var(var(--light-grey));
+    float: right;
+    margin-top: 1vw;
+}
+.carousel .carousel-inner .carousel-item button:hover {
+    border-color:  var(--main-color);
+    background-color: var(--light);
+    box-shadow: 0 0 5px 2px #000;
+}
+
+aside .social-links .aside-icon {
+    height: 4.5vw;
+    position: relative;
+    padding: 0.6vw
+}
+
+aside .social-links .aside-icon:after {
+    content: '';
+    width: 0;
+    height: 0;
+    display: block;
+    position: absolute;
+    border: 0.6vw solid transparent;
+    top: 100%;
+    left: 1vw;
+    z-index: 99;
+}
+aside .social-links .aside-icon:nth-child(1) {
+    background-color: rgb(56, 84, 211);
+}
+aside .social-links .aside-icon:nth-child(1):after {
+    border-top-color: rgb(56, 84, 211);
+}
+aside .social-links .aside-icon:nth-child(2) {
+    background-color: rgb(98, 216, 171);
+}
+aside .social-links .aside-icon:nth-child(2):after {
+    border-top-color: rgb(98, 216, 171);
+}
+aside .social-links .aside-icon:nth-child(3) {
+    background-color: rgb(96, 186, 238);
+}
+aside .social-links .aside-icon:nth-child(3):after {
+    border-top-color: rgb(96, 186, 238);
+}
+aside .social-links .aside-icon:nth-child(4) {
+    background-color: rgb(5, 119, 185);
+}
+aside .social-links .aside-icon:nth-child(4):after {
+    border-top-color: rgb(5, 119, 185);
+}
+aside .social-links .aside-icon:nth-child(5) {
+    background-color: rgb(156, 52, 241);
+}
+
+aside .social-links .aside-icon a i {
+    color: var(--light);
+    font-size: 3vw;
+    line-height: 3vw;
 }
