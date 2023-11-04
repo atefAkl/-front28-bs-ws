@@ -195,20 +195,16 @@ nav .nav-tabs {
 }
 
 nav .nav-tabs button.nav-link {
-    margin: 0 3px 0;
+    margin: 0 3px 3px;
     border: 1px solid #6c757d;
     color: #fff;
     background-color: #345678;
 }
 nav .nav-tabs button.nav-link.active {
+    margin: 0 3px 0;
     color: rgb(0, 81, 255);
     border: 1px solid #345678;
     border-bottom: 5px solid #ffffff;
-}
-
-.nav-link a {
-    color: #999;
-    font: bold 14px/1.4 Cairo;
 }
 
 .tab-content {
@@ -234,6 +230,16 @@ nav .nav-tabs button.nav-link.active {
 
 
 @media screen and (max-width: 992px ) {
+    nav .nav-tabs button.nav-link {
+        padding: 5px
+    }
+    nav .nav-tabs button.nav-link.active {
+        padding: 5px 12px;
+    }
+    nav .nav-tabs {
+        padding: 0 10px;
+    }
+    
     p.text-responsive {
         font-size: 0.8rem
     }
