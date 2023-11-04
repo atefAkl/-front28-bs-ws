@@ -188,6 +188,51 @@ aside .social-links .aside-icon a i {
     line-height: 3vw;
 }
 
+/* Navs and Tabs */
+
+nav .nav-tabs {
+    padding: 0 40px;
+}
+
+nav .nav-tabs button.nav-link {
+    margin: 0 3px 0;
+    border: 1px solid #6c757d;
+    color: #fff;
+    background-color: #345678;
+}
+nav .nav-tabs button.nav-link.active {
+    color: rgb(0, 81, 255);
+    border: 1px solid #345678;
+    border-bottom: 5px solid #ffffff;
+}
+
+.nav-link a {
+    color: #999;
+    font: bold 14px/1.4 Cairo;
+}
+
+.tab-content {
+    border: 1px solid #345678;
+    margin-top: -4px;
+    text-align: right;
+
+}
+.tab-content .tab-pane {
+    background-color: #fff;
+    padding: 0 !important
+}
+.tab-pane h4 {
+    margin: 0;
+    font: bold 14px/1.4 Cairo;
+    color:rgb(0, 81, 255);
+    border: 2px solid transparent;
+    display: inline-block ;
+    border-bottom-color: #345678;
+    padding: 6px 1em;
+}
+
+
+
 @media screen and (max-width: 992px ) {
     p.text-responsive {
         font-size: 0.8rem
@@ -220,3 +265,4 @@ aside .social-links .aside-icon a i {
         font-size: 18px
     }
 }
+
