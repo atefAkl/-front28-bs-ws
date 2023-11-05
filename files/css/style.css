@@ -2,7 +2,9 @@ body {
     position: relative;
     overflow-x: hidden;
     height: 3000px;
+    font-family: cairo;
 }
+
 :root {
     --main-color: #1c7ed6;
     --main-color-o: #1c7ed655;
@@ -15,9 +17,10 @@ body {
     width: 80%;
     margin: auto;
 }
- p.text-responsive {
+
+p.text-responsive {
     font-size: 1.1rem
- }
+}
 
 ul {
     list-style-type: none;
@@ -26,9 +29,11 @@ ul {
 .bg-primary {
     background-color: var(--main-color) !important;
 }
+
 .text-danger {
     color: red !important;
 }
+
 ul.navbar-nav {
     gap: 10px;
 }
@@ -37,7 +42,7 @@ ul.navbar-nav .nav-item {
     padding: 0.5rem 0.2rem;
 }
 
-ul.navbar-nav .nav-item a, 
+ul.navbar-nav .nav-item a,
 ul.navbar-nav .nav-item span.line {
     display: block;
     font: 500 16px / 1 Cairo;
@@ -53,24 +58,26 @@ ul.navbar-nav .nav-item span.line {
 ul.navbar-nav .nav-item:hover span.line {
     width: 100%;
 }
-ul.navbar-nav li.nav-item > ul {
+
+ul.navbar-nav li.nav-item>ul {
     transition: all .4s ease
 }
 
-ul.navbar-nav .nav-item:hover > a::first-letter {
+ul.navbar-nav .nav-item:hover>a::first-letter {
     color: var(--main-color);
 }
 
-ul.navbar-nav .nav-item > ul li a {
+ul.navbar-nav .nav-item>ul li a {
     border-left: 5px solid transparent;
     transition: all 0.3s ease-in-out
 }
 
-ul.navbar-nav .nav-item > ul li:hover a {
-    border-left-color:  var(--main-color);
+ul.navbar-nav .nav-item>ul li:hover a {
+    border-left-color: var(--main-color);
     background-color: var(--main-color-o);
     color: var(--light)
 }
+
 header .search input,
 header .user-form button,
 header .search button {
@@ -91,9 +98,10 @@ header .search button {
     background-color: var(--main-color-o);
     height: 0.5vw;
 }
+
 #myCarousel .carousel-indicators button:hover,
 #myCarousel .carousel-indicators button.active {
-    background-color:  var(--main-color);
+    background-color: var(--main-color);
 }
 
 .carousel .carousel-inner .carousel-item {
@@ -103,8 +111,9 @@ header .search button {
 
 .carousel .carousel-inner .carousel-item .container {
     position: relative;
-    max-width: 100% ;
+    max-width: 100%;
 }
+
 .carousel .carousel-inner .carousel-item .carousel-caption {
     position: absolute;
     top: 5vw;
@@ -130,8 +139,9 @@ header .search button {
     float: right;
     margin-top: 1vw;
 }
+
 .carousel .carousel-inner .carousel-item button:hover {
-    border-color:  var(--main-color);
+    border-color: var(--main-color);
     background-color: var(--light);
     box-shadow: 0 0 5px 2px #000;
 }
@@ -157,27 +167,35 @@ aside .social-links .aside-icon:after {
 aside .social-links .aside-icon:nth-child(1) {
     background-color: rgb(56, 84, 211);
 }
+
 aside .social-links .aside-icon:nth-child(1):after {
     border-top-color: rgb(56, 84, 211);
 }
+
 aside .social-links .aside-icon:nth-child(2) {
     background-color: rgb(98, 216, 171);
 }
+
 aside .social-links .aside-icon:nth-child(2):after {
     border-top-color: rgb(98, 216, 171);
 }
+
 aside .social-links .aside-icon:nth-child(3) {
     background-color: rgb(96, 186, 238);
 }
+
 aside .social-links .aside-icon:nth-child(3):after {
     border-top-color: rgb(96, 186, 238);
 }
+
 aside .social-links .aside-icon:nth-child(4) {
     background-color: rgb(5, 119, 185);
 }
+
 aside .social-links .aside-icon:nth-child(4):after {
     border-top-color: rgb(5, 119, 185);
 }
+
 aside .social-links .aside-icon:nth-child(5) {
     background-color: rgb(156, 52, 241);
 }
@@ -188,48 +206,60 @@ aside .social-links .aside-icon a i {
     line-height: 3vw;
 }
 
+
 /* Navs and Tabs */
 
 nav .nav-tabs {
     padding: 0 40px;
 }
 
+label {
+    font-size: 15px;
+    font-weight: 600
+}
+
 nav .nav-tabs button.nav-link {
     margin: 0 3px 3px;
-    border: 1px solid #6c757d;
+    /* border: 1px solid #6c757d; */
     color: #fff;
     background-color: #345678;
 }
+
+::placeholder {
+    color: rgba(0, 139, 139, 0.281) !important
+}
+
 nav .nav-tabs button.nav-link.active {
-    margin: 0 3px 0;
     color: rgb(0, 81, 255);
-    border: 1px solid #345678;
-    border-bottom: 5px solid #ffffff;
+    /* border: 1px solid #345678; */
+    /* border-bottom: 5px solid #ffffff; */
+    box-shadow: -4px -4px 8px 1px #3332;
+    font-weight: bold;
+    margin-right: 8px
 }
 
 .tab-content {
-    border: 1px solid #345678;
+    /* border: 1px solid #345678; */
     margin-top: -4px;
-    text-align: right;
-
 }
+
 .tab-content .tab-pane {
+    border-radius: 6px;
     background-color: #fff;
     padding: 0 !important
 }
+
 .tab-pane h4 {
     margin: 0;
     font: bold 14px/1.4 Cairo;
-    color:rgb(0, 81, 255);
+    color: rgb(0, 81, 255);
     border: 2px solid transparent;
-    display: inline-block ;
+    display: inline-block;
     border-bottom-color: #345678;
     padding: 6px 1em;
 }
 
-
-
-@media screen and (max-width: 992px ) {
+@media screen and (max-width: 992px) {
     nav .nav-tabs button.nav-link {
         padding: 5px
     }
@@ -239,11 +269,10 @@ nav .nav-tabs button.nav-link.active {
     nav .nav-tabs {
         padding: 0 10px;
     }
-    
     p.text-responsive {
         font-size: 0.8rem
     }
-    .section2  .image {
+    .section2 .image {
         padding: 40px 10px 20px;
     }
     ul.navbar-nav {
@@ -252,18 +281,18 @@ nav .nav-tabs button.nav-link.active {
     ul.navbar-nav li.nav-item {
         padding: 0;
     }
-    
     aside .social-links .aside-icon {
         height: 5vw;
     }
-    ul.navbar-nav .nav-item span.line  {
+    ul.navbar-nav .nav-item span.line {
         display: none;
     }
     aside .social-links .aside-icon a i {
         font-size: 28px
     }
 }
-@media screen and (max-width: 720px ) {
+
+@media screen and (max-width: 720px) {
     aside .social-links .aside-icon {
         height: 6vw;
     }
@@ -271,4 +300,3 @@ nav .nav-tabs button.nav-link.active {
         font-size: 18px
     }
 }
-
