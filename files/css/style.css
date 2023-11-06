@@ -222,15 +222,15 @@ nav .nav-tabs button.nav-link {
     margin: 0 3px 3px;
     /* border: 1px solid #6c757d; */
     color: #fff;
-    background-color: #345678;
+    background-color: #7293adb4
 }
 
 ::placeholder {
-    color: rgba(0, 139, 139, 0.281) !important
+    color: rgba(0, 88, 139, 0.281) !important
 }
 
 nav .nav-tabs button.nav-link.active {
-    color: rgb(0, 81, 255);
+    color: #5594c7 !important;
     /* border: 1px solid #345678; */
     /* border-bottom: 5px solid #ffffff; */
     box-shadow: -4px -4px 8px 1px #3332;
@@ -252,11 +252,43 @@ nav .nav-tabs button.nav-link.active {
 .tab-pane h4 {
     margin: 0;
     font: bold 14px/1.4 Cairo;
-    color: rgb(0, 81, 255);
+    color: #5594c7;
     border: 2px solid transparent;
     display: inline-block;
     border-bottom-color: #345678;
     padding: 6px 1em;
+}
+
+form#myForm .input-group>.input-group-text,
+form#myForm .input-group>.form-control {
+    height: 30px !important;
+    color: #5594c7;
+    border: 1px solid #5594c7 !important
+}
+
+form#myForm .input-group>input[type=file]::file-selector-button {
+    color: #5594c7;
+    padding: 0 1em 5px;
+    margin: 0;
+    width: 0;
+    display: none
+}
+
+form#myForm .form-floating>label {
+    color: #5594c7;
+}
+
+form#myForm .form-floating>textarea.form-control {
+    color: #5594c7;
+    border: 1px solid #5594c7 !important
+}
+
+form#myForm .list-group>.list-group-item {
+    height: 30px !important;
+    line-height: 30px;
+    padding: 0 16px;
+    color: #5594c7;
+    border: 1px solid #5594c7 !important
 }
 
 @media screen and (max-width: 992px) {
