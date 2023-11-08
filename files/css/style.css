@@ -221,12 +221,35 @@ section.bg-fixed {
 }
 section.cards {
     overflow: hidden;
-    height: 500px;
+    
+
 }
 
 section.cards .card {
-    
-    height: 300px;
+    margin-bottom: 12px;
+    height: 500px;
+    overflow: hidden;
+    position: relative;
+}
+
+section.cards .card img,
+section.cards .card .card-body {
+    position: absolute;
+}
+section.cards .card img {
+    top: 0;
+    transition: all 3s linear;
+}
+
+section.cards .card .card-body {
+    background-color: #fff;
+    width: 100%;
+    padding: 2rem;
+    top: 300px;
+    height: 200px;
+}
+section.cards .card:hover img {
+    top: -880px
 }
 /* Navs and Tabs */
 
@@ -241,7 +264,6 @@ label {
 
 nav .nav-tabs button.nav-link {
     margin: 0 3px 3px;
-    /* border: 1px solid #6c757d; */
     color: #fff;
     background-color: #7293adb4
 }
@@ -252,15 +274,12 @@ nav .nav-tabs button.nav-link {
 
 nav .nav-tabs button.nav-link.active {
     color: #5594c7 !important;
-    /* border: 1px solid #345678; */
-    /* border-bottom: 5px solid #ffffff; */
     box-shadow: -4px -4px 8px 1px #3332;
     font-weight: bold;
     margin-right: 8px
 }
 
 .tab-content {
-    /* border: 1px solid #345678; */
     margin-top: -4px;
 }
 
