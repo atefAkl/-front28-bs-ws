@@ -319,50 +319,64 @@
                                 <option value="3">Three</option>
                             </select>
                         </div>
-                        <div class="row">
-                            <div class="col col-lg-3 col-md-12 col-sm-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                    <label class="form-check-label" for="flexCheckDefault">
-                                      Static Home page
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                      Landing Page
-                                    </label>
-                                </div>
+                        <div class="row py-3">
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12 my-3">
+                                
+                                <fieldset class="position-relative p-3 bg-light">
+                                    <legend class="position-absolute px-3 bg-light">Pages Types</legend>
+                                    <div class="form-check pt-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Static Home page
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Landing Page
+                                        </label>
+                                    </div>
+                                </fieldset>
                             </div>
-                            <div class="col col-lg-6 col-md-12 col-sm-12">
-                                <label for="customRange1" class="form-label">Number of pages <span class="badge bg-primary px-3 py-2" id="pages1Number">1</span></label>
-                                <div class="d-flex">
-                                    <span class="px-3">1</span>
-                                    <input type="range" class="form-range" value="1" onchange="document.getElementById( 'pages1Number').innerHTML=this.value" min="1" max="20" step="1" id="customRange1" list="markers"></input>
-                                    <span class="px-3">20</span>
-                                </div>
+                            
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12 my-3">
+                                <fieldset class="position-relative p-3 bg-light">
+                                    <legend class="position-absolute px-3 bg-light">Pages Types</legend>
+                                    <div class="form-check pt-3">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        Admins registring users
+                                        </label>
+                                    </div>
+                                    <div class="form-check position-relative">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                        Users register himself
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
 
-                                <datalist id="markers">
-                                    <option value="0"></option>
-                                    <option value="5"></option>
-                                    <option value="10"></option>
-                                    <option value="15"></option>
-                                    <option value="20"></option>
-                                </datalist>
-                            </div>
-                            <div class="col col-lg-3 col-md-12 col-sm-12">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    <label class="form-check-label" for="flexRadioDefault1">
-                                      Admins registring users
-                                    </label>
+                            <div class="col col-12 my-3">
+                                <fieldset class="position-relative p-3 bg-light">
+                                    <legend class="position-absolute py-0 bg-light">
+                                        <label for="customRange1" class="form-label mt-2">Number of pages 
+                                            <span class="badge bg-primary py-1" id="pages1Number">1</span>
+                                        </label>
+                                    </legend>
+                                
+                                <div class="d-flex pt-3">
+                                    <span class="px-1">1</span>
+                                    <input type="range" class="form-range" value="1" onchange="document.getElementById( 'pages1Number').innerHTML=this.value" min="1" max="20" step="1" id="customRange1" value="1"></input>
+                                    <span class="px-1">20</span>
                                 </div>
                                 <div class="form-check position-relative">
-                                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" checked>
                                     <label class="form-check-label" for="flexRadioDefault2">
-                                      Users register himself
+                                    Including landing page
                                     </label>
                                 </div>
+
                             </div>
                         </div>
 
@@ -396,46 +410,64 @@
                                 <option value="3">Three</option>
                             </select>
                         </div>
-                        <div class="row">
-                            <div class="col col-lg-3 col-md-12 col-sm-12">
-                                <div class="input-group mb-3 w-100">
-                                    <label class="input-group-text"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></label>
-                                    <label class="form-control" for="flexCheckDefault">
-                                      Static Home page
-                                    </label>
-                                </div>
-                                <div class="input-group mb-3 w-100">
-                                    <label class="input-group-text"><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></label>
-                                    <label class="form-control" for="flexCheckDefault">
-                                      Landing Page
-                                    </label>
-                                </div>
+                        <div class="row py-3">
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12 my-3">
+                                
+                                <fieldset class="position-relative p-3 bg-light">
+                                    <legend class="position-absolute px-3 bg-light">Pages Types</legend>
+                                    <div class="form-check pt-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Static Home page
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Landing Page
+                                        </label>
+                                    </div>
+                                </fieldset>
                             </div>
-                            <div class="col col-lg-6 col-md-12 col-sm-12">
-                                <label for="customRange1 my-3" class="form-label">Number of pages <span class="badge bg-primary px-3 py-2" id="pages2Number"></span></label>
-                                <div class="d-flex">
-                                    <span class="px-3">1</span>
-                                    <input type="range" class="form-range" onchange="document.getElementById( 'pages2Number').innerHTML=this.value" min="1" max="20" step="1" id="customRange1" list="markers"></input>
-                                    <span class="px-3">20</span>
-                                </div>
-                            </div>
-                            <div class="col col-lg-3 col-md-12 col-sm-12">
-                                <div class="input-group mb-3">
-                                    <label for="" class="input-group-text">
+                            
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12 my-3">
+                                <fieldset class="position-relative p-3 bg-light">
+                                    <legend class="position-absolute px-3 bg-light">Pages Types</legend>
+                                    <div class="form-check pt-3">
                                         <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                                    </label>
-                                    <label class="form-control" for="flexRadioDefault1">
-                                      Admins submit users
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        Admins registring users
+                                        </label>
+                                    </div>
+                                    <div class="form-check position-relative">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                        Users register himself
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col col-12 my-3">
+                                <fieldset class="position-relative p-3 bg-light">
+                                    <legend class="position-absolute py-0 bg-light">
+                                        <label for="customRange1" class="form-label mt-2">Number of pages 
+                                            <span class="badge bg-primary py-1" id="pages1Number">1</span>
+                                        </label>
+                                    </legend>
+                                
+                                <div class="d-flex pt-3">
+                                    <span class="px-1">1</span>
+                                    <input type="range" class="form-range" value="1" onchange="document.getElementById( 'pages1Number').innerHTML=this.value" min="1" max="20" step="1" id="customRange1" value="1"></input>
+                                    <span class="px-1">20</span>
+                                </div>
+                                <div class="form-check position-relative">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                    Including landing page
                                     </label>
                                 </div>
-                                <div class="input-group">
-                                    <label for="" class="input-group-text">
-                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" >    
-                                    </label>
-                                    <label class="form-control" for="flexRadioDefault2">
-                                      Users register himself
-                                    </label>
-                                </div>
+
                             </div>
                         </div>
 
@@ -456,6 +488,70 @@
                         <div class="form-floating">
                             <input type="password" onblur="this.setAttribute('placeholder', '')" onfocus="this.setAttribute('placeholder', 'Type your paassword')" class="form-control" id="floatingPassword" placeholder="">
                             <label for="floatingPassword">Password</label>
+                        </div>
+                        <div class="row py-3">
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12 my-3">
+                                
+                                <fieldset class="position-relative p-3 bg-light">
+                                    <legend class="position-absolute px-3 bg-light">Pages Types</legend>
+                                    <div class="form-check pt-3">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                                        <label class="form-check-label" for="flexCheckDefault">
+                                            Static Home page
+                                        </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Landing Page
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            
+                            <div class="col col-lg-6 col-md-12 col-sm-12 col-12 my-3">
+                                <fieldset class="position-relative p-3 bg-light">
+                                    <legend class="position-absolute px-3 bg-light">Pages Types</legend>
+                                    <div class="form-check pt-3">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                                        <label class="form-check-label" for="flexRadioDefault1">
+                                        Admins registring users
+                                        </label>
+                                    </div>
+                                    <div class="form-check position-relative">
+                                        <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                        <label class="form-check-label" for="flexRadioDefault2">
+                                        Users register himself
+                                        </label>
+                                    </div>
+                                </fieldset>
+                            </div>
+
+                            <div class="col col-12 my-3">
+                                <fieldset class="position-relative p-3 bg-light">
+                                    <legend class="position-absolute py-0 bg-light">
+                                        <label for="customRange1" class="form-label mt-2">Number of pages 
+                                            <span class="badge bg-primary py-1" id="pages1Number">1</span>
+                                        </label>
+                                    </legend>
+                                
+                                <div class="d-flex pt-3">
+                                    <span class="px-1">1</span>
+                                    <input type="range" class="form-range" value="1" onchange="document.getElementById( 'pages1Number').innerHTML=this.value" min="1" max="20" step="1" id="customRange1" value="1"></input>
+                                    <span class="px-1">20</span>
+                                </div>
+                                <div class="form-check position-relative">
+                                    <input class="form-check-input" type="checkbox" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                                    <label class="form-check-label" for="flexRadioDefault2">
+                                    Including landing page
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end my-3 gap-3">
+                            <button class="btn btn-secondary" type="submit">Cancel</button>
+                            <button class="btn btn-primary" type="submit">Get Quoted</button>
                         </div>
                     </form>
 
@@ -540,7 +636,106 @@
         </div>
     </section>
 
-    <section class="pics">
+    <section class="bg-fixed"></section>
+
+    <section class="cards">
+        <div class="container">
+            <div class="row py-5 ">
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card cardover shadow">
+                            <img src="./files/images/ws-tpl-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">CAIRO</h5>
+                            <p class="card-text">Capital of Egypt</p>
+                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card cardover shadow">
+                            <img src="./files/images/ws-tpl-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">CAIRO</h5>
+                            <p class="card-text">Capital of Egypt</p>
+                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card cardover shadow">
+                            <img src="./files/images/ws-tpl-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">CAIRO</h5>
+                            <p class="card-text">Capital of Egypt</p>
+                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card cardover shadow">
+                            <img src="./files/images/ws-tpl-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">CAIRO</h5>
+                            <p class="card-text">Capital of Egypt</p>
+                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card cardover shadow">
+                            <img src="./files/images/ws-tpl-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">CAIRO</h5>
+                            <p class="card-text">Capital of Egypt</p>
+                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card cardover shadow">
+                            <img src="./files/images/ws-tpl-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">CAIRO</h5>
+                            <p class="card-text">Capital of Egypt</p>
+                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card cardover shadow">
+                            <img src="./files/images/ws-tpl-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">CAIRO</h5>
+                            <p class="card-text">Capital of Egypt</p>
+                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-3 col-lg-4 col-sm-6 col-12">
+                    <div class="card cardover shadow">
+                            <img src="./files/images/ws-tpl-1.jpg" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">CAIRO</h5>
+                            <p class="card-text">Capital of Egypt</p>
+                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <!-- <section class="pics">
         <div class="container">
             <div class="row gap-4">
                 <div class="col col-3 py-5 shadow mt-5">
@@ -578,7 +773,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>

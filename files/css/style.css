@@ -1,7 +1,7 @@
 body {
     position: relative;
     overflow-x: hidden;
-    height: 3000px;
+    height: 5000px;
     font-family: cairo;
 }
 
@@ -206,7 +206,28 @@ aside .social-links .aside-icon a i {
     line-height: 3vw;
 }
 
+/*  fixed bgs */
 
+section.navs {
+    
+}
+section.bg-fixed {
+    background-image: url('../images/fixed-bg-4.webp'); 
+    background-attachment: fixed; 
+    background-size: 100%;
+    height: 400px;
+    box-shadow:  0 0 10px 5px #333e33c7 inset;
+    opacity: 0.4;
+}
+section.cards {
+    overflow: hidden;
+    height: 500px;
+}
+
+section.cards .card {
+    
+    height: 300px;
+}
 /* Navs and Tabs */
 
 nav .nav-tabs {
@@ -289,6 +310,21 @@ form#myForm .list-group>.list-group-item {
     padding: 0 16px;
     color: #5594c7;
     border: 1px solid #5594c7 !important
+}
+
+/* fieldset styles */
+
+fieldset {
+    border: 1px solid #ccc
+}
+legend {
+    font: 600 16px/1 Cairo;
+    top: -1em;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    display: inline-block;
+    width: auto;
+    height: 36px
 }
 
 @media screen and (max-width: 992px) {
