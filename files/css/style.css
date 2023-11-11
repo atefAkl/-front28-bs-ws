@@ -227,7 +227,7 @@ section.cards {
 
 section.cards .card {
     margin-bottom: 12px;
-    height: 500px;
+    height: 350px;
     overflow: hidden;
     position: relative;
 }
@@ -249,8 +249,10 @@ section.cards .card .card-body {
     height: 150px;
 }
 section.cards .card:hover img {
-    top: -880px
+    top: -650px
 }
+
+
 /* Navs and Tabs */
 
 nav .nav-tabs {
@@ -383,7 +385,25 @@ legend {
     aside .social-links .aside-icon {
         height: 6vw;
     }
+
+
+    section.cards .card:hover img {
+        top: -740px
+    }
+    
+    
     aside .social-links .aside-icon a i {
         font-size: 18px
     }
+}
+
+
+@media screen and (max-width: 360px) {
+
+
+    section.cards .card:hover img {
+        top: -800px
+    }
+    
+    
 }
