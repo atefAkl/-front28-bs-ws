@@ -246,12 +246,41 @@ section.cards .card .card-body {
     width: 100%;
     padding: 2rem;
     bottom: 0;
-    height: 150px;
+    height: 180px;
 }
 section.cards .card:hover img {
     top: -650px
 }
 
+
+/* Team */
+#team .card,
+#team .card .card-body {
+    overflow: hidden;
+}
+#team .card .row:after {
+    content: "";
+    display: block;
+    background-color: #fff;
+    height: 500px;
+    width: 45px;
+    position: absolute;
+    z-index: 999;
+    top: -50px;
+}
+
+#team .card .row.one::after,
+#team .card .row.three::after {
+    right: 40%;
+    transform: rotate(5deg);
+}
+
+#team .card .row.two::after,
+#team .card .row.four::after {
+    left: 40%;
+    transform: rotate(-5deg);
+
+}
 
 /* Navs and Tabs */
 
@@ -348,9 +377,21 @@ legend {
     height: 36px
 }
 
+.customCards .card {
+    transition: all .4s ease;
+}
+.customCards .card:hover {
+    transform: scale(1.1)
+}
+
 @media screen and (max-width: 992px) {
     nav .nav-tabs button.nav-link {
         padding: 5px
+    }
+    #team .card .row:after {
+       
+        display: none;
+        
     }
     nav .nav-tabs button.nav-link.active {
         padding: 5px 12px;
