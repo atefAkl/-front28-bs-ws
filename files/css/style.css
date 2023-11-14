@@ -253,35 +253,6 @@ section.cards .card:hover img {
 }
 
 
-/* Team */
-#team .card,
-#team .card .card-body {
-    overflow: hidden;
-}
-#team .card .row:after {
-    content: "";
-    display: block;
-    background-color: #fff;
-    height: 500px;
-    width: 45px;
-    position: absolute;
-    z-index: 999;
-    top: -50px;
-}
-
-#team .card .row.one::after,
-#team .card .row.three::after {
-    right: 40%;
-    transform: rotate(5deg);
-}
-
-#team .card .row.two::after,
-#team .card .row.four::after {
-    left: 40%;
-    transform: rotate(-5deg);
-
-}
-
 /* Navs and Tabs */
 
 nav .nav-tabs {
