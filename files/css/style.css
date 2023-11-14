@@ -355,6 +355,17 @@ legend {
     transform: scale(1.1)
 }
 
+#teams .card .card-body .img-container {
+    overflow: hidden
+}
+
+#teams .card .card-body img {
+    transition: all 2s ease;
+}
+
+#teams .card .card-body:hover img {
+    transfotm: scale(1.1) rotate(5deg)
+}
 @media screen and (max-width: 992px) {
     nav .nav-tabs button.nav-link {
         padding: 5px
