@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header class=" shadow-sm" data-bs-theme="light">
+    <header class=" shadow-sm" data-bs-theme="dark">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top p-0">
                 <div class="container">
@@ -62,10 +62,11 @@
                         </ul>
                         <form class="search d-flex" role="search">
                             <input class="form-control me-1" type="search" placeholder="Search" aria-label="Search">
-                            <button class="btn me-1" type="submit"><i class="fa fa-search"></i></button>
+                            <button class="btn me-1 btn-outline-primary" type="submit"><i class="fa fa-search"></i></button>
                         </form>
                         <form action="" class="user-form">
-                            <button class="btn me-1" type="button" data-bs-toggle="modal" data-bs-target="#login">Login</button>
+                            <button class="btn btn-outline-primary me-1" type="button" data-bs-toggle="modal" data-bs-target="#login"><i class="fas fa-sign-in-alt"></i></button>
+                            <button class="btn btn-outline-primary me-1" type="button" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="fas fa-envelope"></i></button>
                         </form>
                     </div>
                 </div>
@@ -152,7 +153,8 @@
         </section>
     </main>
 
-    <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal fade" id="login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" 
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header bg-primary text-light">
@@ -170,39 +172,68 @@
                             <label class="input-group-text">Email</label>
                             <input type="email" class="form-control" aria-describedby="emailHelp">
                         </div>
-
                         <div class="m-3 form-check">
                             <div class="form-check form-switch">
                                 <input class="form-check-input" type="checkbox" role="switch" checked id="Remember">
                                 <label class="form-check-label" for="Remember">Remember me</label>
                             </div>
-                        </div>
-                        <!-- /form check -->
-
+                        </div>  <!-- /form check -->
                         <div class="button-group mt-3 text-end">
                             <button type="submit" class="btn btn-outline-success" value="">Login</button>
                             <button type="button" class="btn btn-outline-primary" data-bs-dismiss="modal" value="">Close</button>
                         </div>
+                    </form> <!-- /form -->
+                </div> <!-- /model-body -->
+            </div> <!-- /modal-content -->
+        </div> <!-- /modal-dialog -->
+    </div> <!-- /modal -->
+   
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                
+                <div class="modal-body">
+                    <form>
+                        <div class=" input mb-4">
+                            <input type="text" placeholder="your name" class="form-control" id="recipient-name">
+                        </div>
+                        <div class=" input mb-4">
+                            <input type="text" placeholder="phone" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="input mb-4">
+                            <input type="text" placeholder="email address" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="input mb-4">
+                            <textarea class="form-control" placeholder="message" id="message-text"></textarea>
+                        </div>
+                        
                     </form>
-                    <!-- /form -->
-                </div>
-                <!-- /model-body -->
-            </div>
-            <!-- /modal-content -->
-        </div>
-        <!-- /modal-dialog -->
-    </div>
-    <!-- /modal -->
+                </div><!-- Modal Body -->
 
-    <aside class="">
-        <div class="container-fluid p-0 social-links p-r">
-            <div class="trigger-button"></div>
-            <div class="d-flex flex-column justify-content-between ms-auto" style="position: fixed;z-index: 90;top: 15vw;right:5px;">
-                <div class="aside-icon px-lg-2 px-sm-2 py-sm-2"><a href=""><i class="text-light fab fa-facebook"></i></a></div>
-                <div class="aside-icon px-lg-2 px-sm-2 py-sm-2"><a href=""><i class="text-light fab fa-whatsapp"></i></a></div>
-                <div class="aside-icon px-lg-2 px-sm-2 py-sm-2"><a href=""><i class="text-light fab fa-twitter"></i></a></div>
-                <div class="aside-icon px-lg-2 px-sm-2 py-sm-2"><a href=""><i class="text-light fab fa-linkedin-in"></i></a></div>
-                <div class="aside-icon px-lg-2 px-sm-2 py-sm-2"><a href=""><i class="text-light fab fa-instagram"></i></a></div>
+                <div class="modal-footer">
+                    <button type="button" class="modal-btn">Send message</button>
+                </div>
+
+                <div class="shape-1"></div>
+                <div class="shape-2" ></div>
+
+            </div> <!-- Modal content -->
+        </div> <!-- Modal Dialog -->
+    </div> <!-- Modal -->
+
+
+    <aside class="side-social-links">
+        <div id="linksContainer" class="social-links">
+            <div id="trigger-button" class="trigger-button" onclick="this.classList.toggle('active')">
+                <i class="fa fa-bars open"></i>
+                <i class="fa fa-times close"></i>
+            </div>
+            <div class="aside-icons d-grid">
+                <div class="aside-icon"><i class="fab fa-facebook"></i></div>
+                <div class="aside-icon"><i class="fab fa-whatsapp"></i></div>
+                <div class="aside-icon"><i class="fab fa-twitter"></i></div>
+                <div class="aside-icon"><i class="fab fa-linkedin-in"></i></div>
+                <div class="aside-icon"><i class="fab fa-instagram"></i></div>
             </div>
         </div>
     </aside>
@@ -275,7 +306,7 @@
 
     <section class="navs pb-4" style="background-color: rgba(0, 139, 139, 0.281);">
         <div class="container">
-            <h2 class="py-4">Request your own...</h2>
+            <h2 class="mb-4 border-bottom pt-5 fw-bolder text-center text-blue">Request your own...</h2>
             <nav>
                 <div class="nav nav-tabs" id="nav-tab" role="tablist" style="">
                     <button class="nav-link py-1 active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button" role="tab" aria-controls="nav-home" aria-selected="true">
@@ -640,6 +671,7 @@
 
     <section class="cards">
         <div class="container">
+            <h2 class="pb-2 border-bottom pt-5 fw-bolder text-center text-blue">Our Trend Products</h2>
             <div class="row py-5 ">
                 <div class="col col-xl-3 col-lg-6 col-12">
                     <div class="card cardover shadow">
@@ -647,7 +679,7 @@
                         <div class="card-body">
                             <h5 class="card-title fs-3">Lorem, ipsum.</h5>
                             <p class="card-text">Lorem ipsum dolor </p>
-                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                            <button class="btn btn-info text-light mx-auto d-block">See More</button>
                         </div>
                     </div>
                 </div>
@@ -659,7 +691,7 @@
                         <div class="card-body">
                             <h5 class="card-title fs-3">Lorem, ipsum.</h5>
                             <p class="card-text">Lorem ipsum dolor </p>
-                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                            <button class="btn btn-info text-light mx-auto d-block">See More</button>
                         </div>
                     </div>
                 </div>
@@ -670,7 +702,7 @@
                         <div class="card-body">
                             <h5 class="card-title fs-3">Lorem, ipsum.</h5>
                             <p class="card-text">Lorem ipsum dolor </p>
-                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                            <button class="btn btn-info text-light mx-auto d-block">See More</button>
                         </div>
                     </div>
                 </div>
@@ -681,7 +713,7 @@
                         <div class="card-body">
                             <h5 class="card-title fs-3">Lorem, ipsum.</h5>
                             <p class="card-text">Lorem ipsum dolor </p>
-                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                            <button class="btn btn-info text-light mx-auto d-block">See More</button>
                         </div>
                     </div>
                 </div>
@@ -692,7 +724,7 @@
                         <div class="card-body">
                             <h5 class="card-title fs-3">Lorem, ipsum.</h5>
                             <p class="card-text">Lorem ipsum dolor </p>
-                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                            <button class="btn btn-info text-light mx-auto d-block">See More</button>
                         </div>
                     </div>
                 </div>
@@ -703,7 +735,7 @@
                         <div class="card-body">
                             <h5 class="card-title fs-3">Lorem, ipsum.</h5>
                             <p class="card-text">Lorem ipsum dolor </p>
-                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                            <button class="btn btn-info text-light mx-auto d-block">See More</button>
                         </div>
                     </div>
                 </div>
@@ -714,7 +746,7 @@
                         <div class="card-body">
                             <h5 class="card-title fs-3">Lorem, ipsum.</h5>
                             <p class="card-text">Lorem ipsum dolor </p>
-                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                            <button class="btn btn-info text-light mx-auto d-block">See More</button>
                         </div>
                     </div>
                 </div>
@@ -725,7 +757,7 @@
                         <div class="card-body">
                             <h5 class="card-title fs-3">Lorem, ipsum.</h5>
                             <p class="card-text">Lorem ipsum dolor </p>
-                            <button class="btn btn-info text-light mx-auto d-block">Know More</button>
+                            <button class="btn btn-info text-light mx-auto d-block">See More</button>
                         </div>
                     </div>
                 </div>
@@ -739,53 +771,53 @@
         <div class="container px-4 py-5" id="custom-cards">
             <h2 class="pb-2 border-bottom fw-bolder text-center text-white">Great Thanks for</h2>
         
-            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
-              <div class="col">
-                <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./files/images/112.png'); background-position: center center;background-size: cover;">
-                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                      <li class="me-auto">
-                        <img src="./files/images/Profile112.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                      </li>
-                      <li class="d-flex align-items-center me-3">
-                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                        <small>Earth</small>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                        <small>3d</small>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
+            <div class="row row-cols-1 row-cols-lg-3 align-items-stretch py-5">
+                <div class="col py-2">
+                    <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./files/images/112.png'); background-position: center center;background-size: cover;">
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class=" mb-4 display-6 lh-1 fw-bold">Short title</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="./files/images/Profile112.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                            <small>Earth</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                            <small>3d</small>
+                        </li>
+                        </ul>
+                    </div>
+                    </div>
               </div>
         
-              <div class="col">
+              <div class="col py-2">
                 <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./files/images/113.png'); background-position: center center;background-size: cover;">
-                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Much longer title that wraps to multiple lines</h3>
-                    <ul class="d-flex list-unstyled mt-auto">
-                      <li class="me-auto">
-                        <img src="./files/images/profile113.png"" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
-                      </li>
-                      <li class="d-flex align-items-center me-3">
-                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
-                        <small>Pakistan</small>
-                      </li>
-                      <li class="d-flex align-items-center">
-                        <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
-                        <small>4d</small>
-                      </li>
-                    </ul>
-                  </div>
+                    <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                        <h3 class=" mb-4 display-6 lh-1 fw-bold">longer title  multiple lines</h3>
+                        <ul class="d-flex list-unstyled mt-auto">
+                        <li class="me-auto">
+                            <img src="./files/images/profile113.png"" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
+                        </li>
+                        <li class="d-flex align-items-center me-3">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#geo-fill"/></svg>
+                            <small>Pakistan</small>
+                        </li>
+                        <li class="d-flex align-items-center">
+                            <svg class="bi me-2" width="1em" height="1em"><use xlink:href="#calendar3"/></svg>
+                            <small>4d</small>
+                        </li>
+                        </ul>
+                    </div>
                 </div>
               </div>
         
-              <div class="col">
+              <div class="col py-2">
                 <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-lg" style="background-image: url('./files/images/115.png'); background-position: center center;background-size: cover;">
                   <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
+                    <h3 class=" mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h3>
                     <ul class="d-flex list-unstyled mt-auto">
                       <li class="me-auto">
                         <img src="./files/images/profile114.png" alt="Bootstrap" width="32" height="32" class="rounded-circle border border-white">
@@ -806,147 +838,112 @@
           </div>
     </section>
 
-    
-    <section id="team">
+    <section class="pt-1">
         <div class="container">
-            <h4 class="fw-bolder fs-1 text-center pt-5 border-bottom">Our Awesome Works</h2>
-            <div class="row py-5 justify-content-end">
-                <div class="col col-12">
-                    <div class="card mb-3 shadow" >
-                        <div class="row three g-0">
-                            <div class="col-md-7 border-3">
-                                <div class="card-body">
-                                    <h5 class="card-title fs-3 fw-bold">Ziad Al Mohareb</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                                    <p class="card-text pl-5" style="line-height: 1.5; font-size: 1.7vw">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                        This is a wider  content. This content is a little bit longer.
-                                    </p>
-                                    <p class="card-text">
-                                        <button type="button" class="btn btn-secondary">
-                                            <i class="fa fa-umbrella"></i>
-                                            Cyber Security 
-                                        </button>
-                                        <button type="button" class="btn btn-secondary">
-                                            <i class="fa fa-layer-group"></i>
-                                            Layers 
-                                        </button>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-5">
-                                <img src="./files/images/man02.png" class="img-fluid rounded-2" alt="...">
-                            </div>
-                        </div>
-                    </div>
+            <h4 class="fw-bolder fs-1 text-center pt-5 brder-bottom ">Our Awesome Works</h2>
+                <br><br>
+            <article class="postcard d-flex light blue"> <!-- postCard -->
+                <a class="postcard-img_link" href="#">
+                <img class="postcard-img" src="/files/images/man02.png" alt="Image Title" />
+                </a>
+                <div class="postcard-text t-dark">
+                <h1 class="postcard-title fw-bold">Ziad Al Mohareb</h1>
+                <div class="postcard-subtitle small">
+                    <i class="text-blue fas fa-calendar-alt"></i> <span class="px-2">Mon, Nov 20th 2023</span>
                 </div>
-                
-                <div class="col col-12">
-                    <div class="card mb-3 shadow" >
-                        <div class="row four g-0 " >
-                            <div class="col-md-5">
-                                <img src="./files/images/woman02.jpg" class="img-fluid rounded-2" alt="...">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title fs-3 fw-bold">Rehab Nadeem</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                                    <p class="card-text pl-5" style="line-height: 1.5; font-size: 1.7vw">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                        This is a wider  content. This content is a little bit longer.
-                                    </p>
-                                    <p class="card-text">
-                                        <button type="button" class="btn btn-secondary">
-                                            <i class="fa fa-umbrella"></i>
-                                            Cyber Security 
-                                        </button>
-                                        <button type="button" class="btn btn-secondary">
-                                            <i class="fa fa-layer-group"></i>
-                                            Layers 
-                                        </button>
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="postcard-bar"></div>
+                <div class="postcard-preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                    asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo
+                    accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo
+                    iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard-tagbox">
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fab fa-stack-exchange"></i> &nbsp; Team</li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fas fa-layer-group"></i> &nbsp; Groups </li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fas fa-play"></i> &nbsp; Modulus</li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fab fa-slack-hash"></i> &nbsp; Slack</li>
+                </ul>
                 </div>
-                
-                
-                <div class="col col-12">
-                    <div class="card mb-3 shadow" >
-                        <div class="row one g-0">
-                            
-                            <div class="col-md-7">
-                            <div class="card-body">
-                                <h5 class="card-title fs-3 fw-bold">Sultan Al Majic</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                                    <p class="card-text pl-5" style="line-height: 1.5; font-size: 1.7vw">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                        This is a wider  content. This content is a little bit longer.
-                                    </p>
-                                    <p class="card-text">
-                                        <button type="button" class="btn btn-secondary">
-                                            <i class="fa fa-umbrella"></i>
-                                            Cyber Security 
-                                        </button>
-                                        <button type="button" class="btn btn-secondary">
-                                            <i class="fa fa-layer-group"></i>
-                                            Layers 
-                                        </button>
-                                    </p>
-                            </div>
-                            </div>
-                            <div class="col-md-5">
-                                <img src="./files/images/man01.jpg" class="img-fluid rounded-2" alt="...">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col col-12">
-                    <div class="card mb-3 shadow" >
-                        <div class="row two g-0">
-                            <div class="col-md-5">
-                                <img src="./files/images/woman03.png" class="img-fluid rounded-2" alt="...">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title fs-3 fw-bold">Rahma Tareq</h5>
-                                    <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
-                                    <p class="card-text pl-5" style="line-height: 1.5; font-size: 1.7vw">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                        This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.
-                                        This is a wider  content. This content is a little bit longer.
-                                    </p>
-                                    <p class="card-text">
-                                        <button type="button" class="btn btn-secondary">
-                                            <i class="fa fa-umbrella"></i>
-                                            Cyber Security 
-                                        </button>
-                                        <button type="button" class="btn btn-secondary">
-                                            <i class="fa fa-layer-group"></i>
-                                            Layers 
-                                        </button>
-                                    </p>
-                                </div>
-                            </div>
-                            
-                        </div>
-                    </div>
-                </div>
+            </article> <!-- postCard -->
 
-            </div>
+            <article class="postcard d-flex light blue"> <!-- postCard -->
+                <a class="postcard-img_link" href="#">
+                <img class="postcard-img" src="/files/images/woman02.png" alt="Image Title" />
+                </a>
+                <div class="postcard-text t-dark">
+                <h1 class="postcard-title fw-bold">Rehab M. Ali</h1>
+                <div class="postcard-subtitle small">
+                    <i class="text-blue fas fa-calendar-alt"></i> <span class="px-2">Mon, Nov 20th 2023</span>
+                </div>
+                <div class="postcard-bar"></div>
+                <div class="postcard-preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                    asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo
+                    accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo
+                    iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard-tagbox">
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fab fa-stack-exchange"></i> &nbsp; Team</li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fas fa-layer-group"></i> &nbsp; Groups </li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fas fa-play"></i> &nbsp; Modulus</li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fab fa-slack-hash"></i> &nbsp; Slack</li>
+                </ul>
+                </div>
+            </article> <!-- postCard -->
+
+            <article class="postcard d-flex light blue"> <!-- postCard -->
+                <a class="postcard-img_link" href="#">
+                <img class="postcard-img" src="/files/images/man01.jpg" alt="Image Title" />
+                </a>
+                <div class="postcard-text t-dark">
+                <h1 class="postcard-title fw-bold">Peter J. Mahrous</h1>
+                <div class="postcard-subtitle small">
+                    <i class="text-blue fas fa-calendar-alt"></i> <span class="px-2">Mon, Nov 20th 2023</span>
+                </div>
+                <div class="postcard-bar"></div>
+                <div class="postcard-preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                    asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo
+                    accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo
+                    iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard-tagbox">
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fab fa-stack-exchange"></i> &nbsp; Team</li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fas fa-layer-group"></i> &nbsp; Groups </li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fas fa-play"></i> &nbsp; Modulus</li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fab fa-slack-hash"></i> &nbsp; Slack</li>
+                </ul>
+                </div>
+            </article> <!-- postCard -->
+
+            <article class="postcard d-flex light blue"> <!-- postCard -->
+                <a class="postcard-img_link" href="#">
+                <img class="postcard-img" src="/files/images/woman03.png" alt="Image Title" />
+                </a>
+                <div class="postcard-text t-dark">
+                <h1 class="postcard-title fw-bold">Safaa S. Mejahed</h1>
+                <div class="postcard-subtitle small">
+                    <i class="text-blue fas fa-calendar-alt"></i> <span class="px-2">Mon, Nov 20th 2023</span>
+                </div>
+                <div class="postcard-bar"></div>
+                <div class="postcard-preview-txt">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, fugiat
+                    asperiores inventore beatae accusamus odit minima enim, commodi quia, doloribus eius! Ducimus nemo
+                    accusantium maiores velit corrupti tempora reiciendis molestiae repellat vero. Eveniet ipsam adipisci illo
+                    iusto quibusdam, sunt neque nulla unde ipsum dolores nobis enim quidem excepturi, illum quos!</div>
+                <ul class="postcard-tagbox">
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fab fa-stack-exchange"></i> &nbsp; Team</li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fas fa-layer-group"></i> &nbsp; Groups </li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fas fa-play"></i> &nbsp; Modulus</li>
+                    <li class="mx-1 btn-sm btn btn-outline-info"><i class="fab fa-slack-hash"></i> &nbsp; Slack</li>
+                </ul>
+                </div>
+            </article> <!-- postCard -->
         </div>
-
-
     </section>
-
+    
+    
 <footer class="bg-dark">
     <div class="container pt-5">
 
         
         <div class="row">
             <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
+            <h5 class="text-white">Section</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
@@ -957,7 +954,7 @@
         </div>
         
         <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
+            <h5 class="text-white">Section</h5>
             <ul class="nav flex-column">
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
                 <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
@@ -968,7 +965,7 @@
         </div>
   
         <div class="col-6 col-md-2 mb-3">
-          <h5>Section</h5>
+          <h5 class="text-white">Section</h5>
           <ul class="nav flex-column">
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Home</a></li>
               <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Features</a></li>
@@ -980,8 +977,8 @@
         
         <div class="col-md-5 offset-md-1 mb-3">
             <form>
-                <h5>Subscribe to our newsletter</h5>
-                <p>Monthly digest of what's new and exciting from us.</p>
+                <h5 class="text-white">Subscribe to our newsletter</h5>
+                <p class="text-white">Monthly digest of what's new and exciting from us.</p>
                 <div class="d-flex flex-column flex-sm-row w-100 gap-2">
                     <label for="newsletter1" class="visually-hidden">Email address</label>
                     <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
@@ -989,18 +986,41 @@
                 </div>
             </form>
         </div>
-    </div>
+
     
-    <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-        <p class="text-white">© 2023 Company, Inc. All rights reserved.</p>
-        <ul class="list-unstyled d-flex"><i class="fa-brands fa-facebook"></i>
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><i class=" text-light fa fa-facebook"></i></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="link-body-emphasis" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-        </ul>
-    </div>
+        <div class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+            <p class="text-white">© 2023 Company, Inc. All rights reserved.</p>
+        
+            <ul class="list-unstyled d-flex">
+                <li class="ms-3"><a href="">  <i class="text-light fab fa-facebook"></i> </a></li>
+                <li class="ms-3"><a href="">  <i class="text-light fab fa-whatsapp"></i> </a></li>
+                <li class="ms-3"><a href="">  <i class="text-light fab fa-twitter"></i> </a></li>
+                <li class="ms-3"><a href="">  <i class="text-light fab fa-linkedin-in"></i> </a></li>
+                <li class="ms-3"><a href="">  <i class="text-light fab fa-instagram"></i> </a></li>
+            </ul>
+        </div>
     </div>
 </footer>
+<!-- <button id="btn1">send</button>
+    <input type="text" name="" id="t1">
+
+<script>
+
+var btn1 = document.getElementById("btn1")
+  
+var code1 = function(){
+   console.log("mohamed")
+   }
+   
+   btn1.onclick = code1
+
+    var triggerBtn = document.getElementById('trigger-button')
+    document.onclick = function (e) {
+        if (e.target.id == 'trigger-button') {
+            console.log(triggerBtn)
+        }
+    }
+</script> -->
 
 
 
