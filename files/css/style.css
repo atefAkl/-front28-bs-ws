@@ -83,16 +83,27 @@ ul.navbar-nav .nav-item>ul li:hover a {
     background-color: var(--main-color-o);
     color: var(--light)
 }
+header .user-form, header .search  {
+margin: 1em 0; 
+}
 
 header .search input,
 header .user-form button,
 header .search button {
-    height: 30px;
+	height: 30px;
     line-height: 30px;
-    padding: 0 1em;
-    border: 1px solid #1c7ed6;
     color: #1c7ed6;
     font-weight: 600;
+	border: none;
+	background-color: transparent;
+}
+.subscribe input, .subscribe span,
+header .search input {
+	border: 1px solid #1c7ed6;
+	
+}
+.subscribe span {
+	cursor: pointer;
 }
 
 #myCarousel {
