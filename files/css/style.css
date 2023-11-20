@@ -4,6 +4,15 @@ body {
     height: 5000px;
     font-family: cairo;
 }
+/* CSS to apply easing effect */ 
+html, body {
+    -webkit-scroll-behavior: smooth;
+    -moz-scroll-behavior: smooth;
+    scroll-behavior: smooth;
+  
+    /* Custom cubic-bezier easing */
+    scroll-behavior: cubic-bezier(0.42, 0, 0.58, 1);
+  }
 
 :root {
     --main-color: #1c7ed6;
@@ -672,7 +681,21 @@ legend {
 .customCards .card:hover {
     transform: scale(1.1)
 }
+#gototop {
+    position: absolute;
+    right: 0; 
+    top: 0px; 
+    color: #fff;
+    text-shadow: 0 0 2px #e2dbdb;
+}
 
+#gototop:hover {
+    animation: swing 0.7s ease-out infinite
+}
+@keyframes swing {
+    from {top:0}
+    to{top: -10px;}
+}
 @media screen and (max-width: 992px) {
     nav .nav-tabs button.nav-link {
         padding: 5px
