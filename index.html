@@ -11,6 +11,9 @@
 </head>
 
 <body>
+    <div class="spinner" style="min-height: 100vh; width: 100vw; background-image: url('./files/images/228d269a2c536f7c19d5fc5a82f76659.gif'); background-size: 100%; background-position: center center; background-repeat: no-repeat;">
+hello naggati
+</div>
     <header class=" shadow-sm" data-bs-theme="light">
         <div class="container">
             <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top p-0">
@@ -1031,6 +1034,12 @@
         document.querySelector("#gototop").addEventListener("click", function() {
             window.scrollTo({top: 0, behavior: "smooth", duration: 1000 });
         });
+    </script>
+    <script>
+        window.addEventListener('load', function () {
+            const spinner = document.querySelector('.spinner')
+            spinner.style.display = 'none'
+        })
     </script>
 </body>
 
