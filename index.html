@@ -1036,9 +1036,14 @@ hello naggati
         });
     </script>
     <script>
+
+        document.body.style.overFlow = 'hidden'
+        
         window.addEventListener('load', function () {
             const spinner = document.querySelector('.spinner')
             spinner.style.display = 'none'
+        document.body.style.overFlow = 'auto'
+            
         })
     </script>
 </body>
